@@ -18,6 +18,8 @@ class Employee extends Model
         'country_id',
         'department_id',
         'zip_code',
+        'salary',
+        'tax',
         'birth_date',
         'date_hired'
     ];
@@ -41,4 +43,5 @@ class Employee extends Model
     {
         return $this->belongsTo(Department::class);
     }
+
 }

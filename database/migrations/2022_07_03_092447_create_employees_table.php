@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('address');
             $table->char('zip_code');
             $table->date('birth_date');
+            $table->int('salary');
+            $table->int('tax');
             $table->date('date_hired');
             $table->timestamps();
         });

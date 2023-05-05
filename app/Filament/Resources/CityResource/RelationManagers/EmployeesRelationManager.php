@@ -62,6 +62,7 @@ class EmployeesRelationManager extends RelationManager
                 TextInput::make('last_name')->required()->maxLength(255),
                 TextInput::make('address')->required()->maxLength(255),
                 TextInput::make('zip_code')->required()->maxLength(7),
+                TextInput::make('salary')->required()->maxLength(7),
                 DatePicker::make('birth_date')->required(),
                 DatePicker::make('date_hired')->required(),
             ]);
@@ -74,6 +75,7 @@ class EmployeesRelationManager extends RelationManager
                 TextColumn::make('id')->sortable(),
                 TextColumn::make('first_name')->sortable()->searchable(),
                 TextColumn::make('last_name')->sortable()->searchable(),
+                // TextInput::make('salary')->sortable(),
                 TextColumn::make('department.name')->sortable(),
                 TextColumn::make('date_hired')->date(),
                 TextColumn::make('created_at')->dateTime(),

@@ -71,6 +71,7 @@ class EmployeeResource extends Resource
                         TextInput::make('last_name')->required()->maxLength(255),
                         TextInput::make('address')->required()->maxLength(255),
                         TextInput::make('zip_code')->required()->maxLength(7),
+                        TextInput::make('salary')->required(),
                         DatePicker::make('birth_date')->required(),
                         DatePicker::make('date_hired')->required(),
                     ])
@@ -85,6 +86,8 @@ class EmployeeResource extends Resource
                 TextColumn::make('first_name')->sortable()->searchable(),
                 TextColumn::make('last_name')->sortable()->searchable(),
                 TextColumn::make('department.name')->sortable(),
+                TextColumn::make('salary')->sortable(),
+                TextColumn::make('tax')->sortable(),
                 TextColumn::make('date_hired')->date(),
                 TextColumn::make('created_at')->dateTime(),
             ])
